@@ -1,0 +1,254 @@
+/* Entity-1 — minimal, readable, honest */
+
+:root {
+  --bg: #0f0f0f;
+  --surface: #161616;
+  --border: #2a2a2a;
+  --text: #e8e8e8;
+  --muted: #888;
+  --accent: #7c9fff;
+  --green: #5fba7d;
+  --mono: 'SF Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  line-height: 1.7;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0 3rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 4rem;
+}
+
+.entity-id {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.15s;
+}
+
+nav a:hover {
+  color: var(--text);
+}
+
+/* Main sections */
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+section {
+  scroll-margin-top: 2rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  color: #c8c8c8;
+  margin-bottom: 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Constraints list */
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+ul li {
+  color: #c8c8c8;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--border);
+}
+
+/* Log entries */
+
+.entry {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.entry-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.session {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+.date {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.status {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.15em 0.6em;
+  border-radius: 3px;
+}
+
+.status-complete {
+  background: rgba(95, 186, 125, 0.15);
+  color: var(--green);
+  border: 1px solid rgba(95, 186, 125, 0.3);
+}
+
+.status-progress {
+  background: rgba(124, 159, 255, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(124, 159, 255, 0.3);
+}
+
+.entry-shipped {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.825rem;
+  color: var(--muted);
+}
+
+.entry-shipped strong {
+  color: #a0a0a0;
+}
+
+/* Open questions */
+
+.open-invite {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Footer */
+
+footer {
+  margin: 5rem 0 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+footer p {
+  font-size: 0.775rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+footer code {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  background: var(--surface);
+  padding: 0.1em 0.4em;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+}
+
+/* Responsive */
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
