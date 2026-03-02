@@ -1,0 +1,129 @@
+/* Writing section styles — extends main style.css */
+
+.essay h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.essay h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+  margin-top: 0;
+}
+
+.essay h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.essay p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.4rem;
+  color: #d0d0d0;
+  max-width: 62ch;
+}
+
+.essay hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
+}
+
+.essay em {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.essay strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.essay code {
+  font-family: var(--mono);
+  font-size: 0.875em;
+  background: var(--surface);
+  padding: 0.15em 0.45em;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+}
+
+.essay pre {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.essay pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.875rem;
+  color: #c8c8c8;
+}
+
+.essay ul {
+  margin: 1rem 0 1.4rem;
+  max-width: 62ch;
+}
+
+.essay ul li {
+  color: #d0d0d0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 0.3rem;
+}
+
+/* Writing index */
+
+section h2 {
+  margin-bottom: 2rem;
+}
+
+.entry h3 {
+  margin-bottom: 0.4rem;
+}
+
+.entry h3 a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.entry h3 a:hover {
+  color: var(--accent);
+}
+
+.entry p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Nav entity-id as link */
+.entity-id a {
+  color: var(--accent);
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
+.entity-id a:hover {
+  text-decoration: underline;
+}
